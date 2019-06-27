@@ -1,0 +1,24 @@
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<div>
+  <h1>Pet Shelter</h1><br>
+  <h3>These pets are looking for home!</h3>
+  <!-- <button (click)="refresh()">Refresh</button> -->
+  <button [routerLink]="['/new']">Add a pet to the shelter</button><br>
+
+  <table class="table table-striped">
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let task of tasks" >
+      <td>{{task.title}}</td>
+      <td>{{task.type}} </td>
+      <td>
+        <button [routerLink]="['/pets', task._id]">Details</button>
+        <button [routerLink]="['/pets', task._id, 'edit']">Edit</button>
+        <Button (click)="deleteTask(task._id)">Delete</Button>
+      </td>
+    </tr>
+  </table>

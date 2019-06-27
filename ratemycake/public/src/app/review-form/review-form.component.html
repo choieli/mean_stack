@@ -1,0 +1,18 @@
+<img (click)="showSingleCake(cake)" src="{{cakeForReview.imageUrl}}" alt="cake">
+<form (submit)='createReview()'>
+    <p>
+      <label for="star">Stars:</label>
+      <select name="newReview.star"  [(ngModel)]="newReview.star">
+        <option value="5">5</option>
+        <option value="4">4</option>
+        <option value="3">3</option>
+      </select>
+    </p>
+    <p>
+      <label for="description">Description: </label>
+      <input type="text" name="newReview.description" [(ngModel)]="newReview.description">
+    </p>
+    <input type="submit" value="Add Review">
+</form>
+
+  <app-single-cake *ngIf='cakeVisibility' [cakeToShow]='cakeForReview'></app-single-cake>

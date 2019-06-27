@@ -1,0 +1,39 @@
+
+<form (submit)="SubmitNewTask()">
+  <!-- use the json pipe to see how newTask changes in real time -->
+  <h1>Pet Shelter</h1>
+  <h3>Know of a pet needing a home?</h3>
+  
+  <p>
+    <label for="title">Pet name: </label><br>
+    <input type="text" name="task.title"  [(ngModel)]="task.title" autocomplete="off"/>
+  </p>
+  <p>
+    <label for="title">Pet type: </label><br>
+    <input type="text" name="task.type"  [(ngModel)]="task.type" autocomplete="off"/>
+  </p>
+  <p>
+    <label for="description">Description: </label><br>
+    <input type="text" name="task.description" [(ngModel)]="task.description" autocomplete="off" />
+  </p>
+  <p>Skill:</p>
+  <p>
+    <label for="title">Skill 1: </label><br>
+    <input type="text" name="task.skill1"  [(ngModel)]="task.skill1" autocomplete="off"/>
+  </p>
+  <p>
+    <label for="title">Skill 2: </label><br>
+    <input type="text" name="task.skill2"  [(ngModel)]="task.skill2" autocomplete="off"/>
+  </p>
+  <p>
+    <label for="title">Skill 3: </label><br>
+    <input type="text" name="task.skill3"  [(ngModel)]="task.skill3" autocomplete="off"/>
+  </p>
+  
+  <input type="hidden" #like="ngModel" name="task.like"  [(ngModel)]="task.like" value="0">
+
+  <input type="submit" value="Add pet" /><button [routerLink]="['']">Cancel</button>
+</form>
+
+
+<p *ngIf = "anyerror">{{error.errors}}</p>

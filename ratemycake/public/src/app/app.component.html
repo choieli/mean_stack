@@ -1,0 +1,34 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+
+<div>
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <fieldset>
+    <h2>Submit New Cake</h2>
+    <form (submit)='createCake()'>
+      <p>
+        <label for="bakerName">Baker Name: </label>
+        <input type="text" name="newCake.baker" [(ngModel)]="newCake.baker">
+      </p>
+      <p>
+        <label for="bakerName">Image URL: </label>
+        <input type="text" name="newCake.imageUrl" [(ngModel)]="newCake.imageUrl">
+      </p>
+      <input type="submit" value="Create">
+    </form>
+  </fieldset>
+
+  <div *ngFor="let cake of allCakes">
+    <!-- <img (click)="showSingleCake(cake)" src="{{cake.imageUrl}}" alt="cake"> -->
+    <app-review-form [cakeForReview] = "cake"></app-review-form>
+    <!-- <app-single-cake *ngIf='cakeVisibility' [cakeToShow]='cake'></app-single-cake> -->
+    <hr>
+
+  </div>
+
+  
+</div>
+
+<router-outlet></router-outlet>

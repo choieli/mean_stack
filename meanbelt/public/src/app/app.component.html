@@ -1,0 +1,28 @@
+
+
+
+
+<!-- <div>
+  <h1>Let's eat</h1><br>
+  <button (click)="refresh()">Refresh</button>
+  <button [routerLink]="['/new']">New Resurant</button><br>
+
+  <table class="table">
+    <tr>
+      <th>Resturants</th>
+      <th>Cuisine</th>
+      <th>Actions Available</th>
+    </tr>
+    <tr *ngFor="let task of tasks" >
+      <td>{{task.title}}</td>
+      <td>{{task.description}} </td>
+      <td>
+        <button [routerLink]="['/reviews', task._id, 'reviews']">Read Reviews</button>
+        <button [routerLink]="['/update', task._id, 'edit']">Update</button>
+        <Button (click)="deleteTask(task._id)">Delete</Button>
+      </td>
+    </tr>
+  </table>
+  
+</div> -->
+<router-outlet></router-outlet>
