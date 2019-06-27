@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<h1>Pet Shelter</h1>
+<h3>Details about {{tasks.title}}</h3><a [routerLink]="['']">Home</a>
+
+<!-- <button [routerLink]="['/new', thistask._id, 'reviews']">New Review</button> -->
+
+<!-- <button (click)="addnewreview(thistask)">Add New Review</button> -->
+<!-- <button [routerLink]="['/new', thistask,'reviews']">Add New Review</button> -->
+
+<table>
+  <tr>
+    <td>Pet type</td>
+    <td>{{tasks.type}}</td>
+  </tr>
+  <tr>
+    <td>Description:</td>
+    <td>{{tasks.description}}</td>
+  </tr>
+  <tr>
+    <td>Skills:</td>
+    <td>{{tasks.skill1}}</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>{{tasks.skill2}}></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>{{tasks.skill3}}</td>
+  </tr>
+  <tr>
+    <td>Likes:</td>
+    <td>{{likes}}</td>
+  </tr>
+</table>
+<form (click)='addlike()'>
+  <button type="submit">Like this pet</button>
+</form>
+<button>Adopt this pet!</button>
+
+
+
+
+
+
+
+
+<!-- <table class="table table-striped">
+  <tr>
+    <th>Customer</th>
+    <th>Stars</th>
+    <th>Descriptions</th>
+  </tr>
+  <tr *ngFor="let review of tasks.reviews">
+    <td>{{review.name}}</td>
+    <td>{{review.star}}</td>
+    <td>{{review.description}}</td>
+  </tr>
+  
+</table> -->
+
+
+
+<!-- <app-newreview *ngIf='visibility' [RestforReview] = 'thistask' ></app-newreview> -->

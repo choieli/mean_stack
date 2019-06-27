@@ -1,0 +1,35 @@
+<form (submit)="updateTask()">
+  <!-- use the json pipe to see how newTask changes in real time -->
+  <h1>Pet Shlter</h1><br>
+  <h3>Edit this pet</h3>
+
+  <p>
+    <label for="title">Pet Name: </label>
+    <input type="text" name="editTask.title"  [(ngModel)]="editTask.title" />
+  </p>
+  <p>
+      <label for="type">Pet Type: </label>
+      <input type="text" name="editTask.type"  [(ngModel)]="editTask.type" />
+    </p>
+  <p>
+    <label for="description">Cuisine: </label>
+    <input type="text" name="editTask.description" [(ngModel)]="editTask.description"/>
+  </p>
+  <p>Skill (optional):</p>
+  <p>
+    <label for="title">Skill 1: </label><br>
+    <input type="text" name="editTask.skill1"  [(ngModel)]="editTask.skill1" />
+  </p>
+  <p>
+    <label for="title">Skill 2: </label><br>
+    <input type="text" name="editTask.skill2"  [(ngModel)]="editTask.skill2" />
+  </p>
+  <p>
+    <label for="title">Skill 3: </label><br>
+    <input type="text" name="editTask.skill3"  [(ngModel)]="editTask.skill3" />
+  </p>
+  <button [routerLink]="['']">Cancel</button>
+  <input type="submit" value="Edit pet" />
+</form>
+
+<p *ngIf = "anyerror">{{error.errors}}</p>
